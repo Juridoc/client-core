@@ -1,0 +1,45 @@
+{
+  "name": "@juridoc/client-core",
+  "description": "Juridoc API client, core module.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Juridoc",
+    "email": "devteam@juridoc.com.br",
+    "url": "https://juridoc.com.br"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Juridoc/client-core.git"
+  },
+  "main": "release/source/index.js",
+  "types": "release/types/index.d.ts",
+  "keywords": [],
+  "engines": {
+    "node": ">=10"
+  },
+  "dependencies": {
+    "@singleware/class": "^1.1.19",
+    "@singleware/injection": "^1.0.23",
+    "@singleware/restdb": "^1.3.90"
+  },
+  "devDependencies": {
+    "@singleware/testing": "^1.0.1",
+    "@types/node": "^10.17.35",
+    "prettier": "^2.1.2",
+    "typescript": "^3.9.7"
+  },
+  "prettier": {
+    "endOfLine": "lf",
+    "trailingComma": "none",
+    "printWidth": 135,
+    "tabWidth": 2,
+    "singleQuote": true,
+    "semi": true
+  },
+  "scripts": {
+    "build": "npm run clean && npm run make",
+    "clean": "rm -rf ./release",
+    "make": "npm run compile-source",
+    "compile-source": "npx tsc -p ./source"
+  }
+}

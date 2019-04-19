@@ -1,0 +1,8 @@
+.*
+.stackdump
+release/**/*.tsbuildinfo
+release/**/*.map
+node_modules/
+!.gitignore
+!.npmignore
+!.vscode
